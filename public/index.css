@@ -1,5 +1,40 @@
-body{
-    background-color: hsl(229, 57%, 11%);
-    background-image: url("./assets/bg-desktop.png");
-    background-size: auto;
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
+
+.top-half {
+    flex: 1;
+    background-color: hsl(210, 50%, 20%);
+}
+
+.bottom-half {
+    flex: 1;
+    background: url('./assets/bg-desktop.png') center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Creating the curved effect */
+.bottom-half::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: hsl(210, 50%, 20%);
+    border-radius: 50%;
+}
+
+
+
+/* .item-1{
+    background-color: hsl(228, 56%, 26%);
+    height:200px;
+    width:350px;
+    text-align:center;
+    border-top-right-radius:100px;
+} */
